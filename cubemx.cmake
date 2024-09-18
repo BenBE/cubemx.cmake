@@ -13,8 +13,10 @@ endif()
 
 set(CMX_CMAKE "${CMAKE_CURRENT_LIST_DIR}/cubemx-cmake.py")
 
-enable_language(ASM)
-set(CMAKE_EXECUTABLE_SUFFIX ".elf")
+# This needs to be set by the calling project
+# to avoid warnings with recent cmake versions.
+# enable_language(ASM)
+# set(CMAKE_EXECUTABLE_SUFFIX ".elf")
 
 define_property(TARGET PROPERTY TARGET_FILE_BIN
     BRIEF_DOCS "Name of the raw image file"
